@@ -4,7 +4,7 @@ function [kpx, kpy, kpname] = getKeyPoints(filename)
 
 % Update these according to your requirements
 USE_GPU = 0; % 1 for GPU
-img_fn = filename; %sample_img.png
+img_fn = char(filename); %sample_img.png
 
 DEMO_BASEDIR = pwd;
 DEMO_MODEL_FN = fullfile(DEMO_BASEDIR,'data','keypoint-v2.mat');
