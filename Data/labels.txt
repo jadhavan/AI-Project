@@ -1,0 +1,15 @@
+1) Walking = 1-110
+2) Running = 112-221
+3) Bend =    222-230
+4) boxing =  231-330
+5) handclap= 331-429
+6) handwave= 430-529, 684-692
+7) jack =    530-538
+8) jogging = 539-638
+9) jump =    639-647
+10)pjump =   648-656
+11) side =   657-665
+12) skip =   666-675
+13) wave1 =  676-684  
+
+*111 is also handwaving, but it got misplaced
