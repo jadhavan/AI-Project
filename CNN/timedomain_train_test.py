@@ -1,26 +1,35 @@
-#!/bin/python
-
 #from tensorflow.examples.tutorials.mnist import input_data
 #mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
-
+from random import sample
 import numpy as np
 import tensorflow as tf
 import json
 datX=[]
 daty=[]
 with open('vector_flatten_pos.json') as json_data:
-    
     datX.append(json.load(json_data))
 
-with open('vector_flatten_label_nos.json') as json_data:
-    
+with open('vector_flatten_label_pos_nos.json') as json_data:
     daty.append(json.load(json_data))
 #print mnist.train.images.shape
-print np.array(datX).shape               
+print np.array(datX).shape
 X=np.array(datX).reshape((196,1961*15*4))
 #X=(X-np.average(X,axis=0))/np.std(X,axis=0)
 y=np.array(daty).reshape((196,20))
-#X=np.transpose(X).reshape((1,950*170))               
+data_nos_test = sample(range(0,np.array(datX)[0].shape[0]),int(0.2*np.array(datX)[0].shape[0]))
+data_nos_train = []
+for i in range(np.array(datX)[0].shape[0]):
+    if data_nos_test.count(i):
+        continue
+    data_nos_train.append(i)
+
+
+X_test = np.delete(X,data_nos_train,0)
+y_test = np.delete(y,data_nos_train,0)
+X_train = np.delete(X,data_nos_test,0)
+y_train = np.delete(y,data_nos_test,0)
+
+#X=np.transpose(X).reshape((1,950*170))
 #X=X[:,0:100]
 sess = tf.InteractiveSession()
 
@@ -31,7 +40,7 @@ def bias_variable(shape):
     initial = tf.constant(0.1, shape=shape)
     return tf.Variable(initial)
 def conv2d(x, W):
-    return tf.nn.conv2d(x, W, strides=[1, 5, 5, 1], padding='SAME')# try changing no. of strides
+    return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')# try changing no. of strides
 def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],strides=[1, 2, 2, 1], padding='SAME') # try changin the pooling options (strides and ksize)
 
@@ -39,7 +48,7 @@ nframes=1961 # No. of frames
 njoints=15 #No. of joints
 jointdim=4 #Joint dimensions
 nactivities=20 #No. of activities
-conv1k=15 #convolution kernal size
+conv1k=20 #convolution kernal size
 conv2k=5
 conv3k=3
 x = tf.placeholder(tf.float32, shape=[None, njoints*nframes*jointdim])
@@ -77,7 +86,7 @@ b_fc1 = bias_variable([600]) #change here too
 h_pool2_flat = tf.reshape(h_pool2, [-1, b.value*c.value*d.value])
 h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
 
-keep_prob1 = tf.placeholder(tf.float32) 
+keep_prob1 = tf.placeholder(tf.float32)
 h_fc1_drop1 = tf.nn.dropout(h_fc1, keep_prob1) #shd check wat dropout does
 print h_fc1_drop1.get_shape()
 
@@ -104,19 +113,19 @@ train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 correct_prediction = tf.equal(tf.argmax(y_conv,1), tf.argmax(y_,1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 sess.run(tf.initialize_all_variables())
-bs=50 # change this to change the batch size
-print "hi"                  
+bs=40 # change this to change the batch size
+print "hi"
 for i in range(500): # change the no. of iterations for training
     for j in range(4):
-        Xtr= X[bs*j:bs*(j+1),:]
-        ytr= y[bs*j:bs*(j+1),:]
+        Xtr= X_train[bs*j:bs*(j+1),:]
+        ytr= y_train[bs*j:bs*(j+1),:]
         #print Xtr.shape
     #batch = mnist.train.next_batch(50)
         if i%25 == 0:
             print i
             print cross_entropy.eval(feed_dict={x:X, y_: y, keep_prob1: 1.0, keep_prob2: 1.0})
-        train_accuracy = accuracy.eval(session=sess,feed_dict={x:Xtr, y_: ytr, keep_prob1: 1.0, keep_prob2: 1.0})
-        print("step %d, training accuracy %g"%(i, train_accuracy))
-        sess.run(train_step,feed_dict={x: Xtr, y_: ytr, keep_prob1: 1.0, keep_prob2: 1.0})
+            train_accuracy = accuracy.eval(session=sess,feed_dict={x:X_test, y_: y_test, keep_prob1: 1.0, keep_prob2: 1.0})
+            print("step %d, training accuracy %g"%(i, train_accuracy))
+        sess.run(train_step,feed_dict={x: Xtr, y_: ytr, keep_prob1: 0.8, keep_prob2: 1.0})
 print "hi"
 #p= accuracy.eval(session=sess,feed_dict={ x: Xt, y_: yt, keep_prob1: 1.0, keep_prob2: 1.0})
