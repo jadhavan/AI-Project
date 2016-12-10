@@ -5,6 +5,8 @@ from random import sample
 import numpy as np
 import tensorflow as tf
 import json
+import os
+import sys
 
 stridesize = int(sys.argv[1])
 seed = int(sys.argv[2])
@@ -12,6 +14,7 @@ tf.set_random_seed(seed)
 
 print "Running with stride %i and seed %i"%(stridesize, seed)
 
+#this is the directory of the data
 os.chdir("0.3")
 
 datX=[]
@@ -148,7 +151,7 @@ for i in range(2000): # change the no. of iterations for training
             cst=cost
             mxval=train_accuracy
             print("step %d, training (test) accuracy %g, cost %g"%(i, train_accuracy, cost))
-            saver.save(sess, "/home/smurlidaran/AIproject/model2")
+            saver.save(sess, "/home/ttshiz/AIproject/model2")
             pred=tf.argmax(y_conv,1)
             label= tf.argmax(y_,1)
             print sess.run(pred,feed_dict={x:X_test, y_: y_test, keep_prob1: 1.0, keep_prob2: 1.0})
@@ -156,7 +159,7 @@ for i in range(2000): # change the no. of iterations for training
 
         if train_accuracy==mxval and cost<cst:
             print("step %d, training (test) accuracy %g, cost %g"%(i, train_accuracy, cost))
-            saver.save(sess, "/home/smurlidaran/AIproject/model2")
+            saver.save(sess, "/home/ttshiz/AIproject/model2")
             pred=tf.argmax(y_conv,1)
             label= tf.argmax(y_,1)
             print sess.run(pred,feed_dict={x:X_test, y_: y_test, keep_prob1: 1.0, keep_prob2: 1.0})
