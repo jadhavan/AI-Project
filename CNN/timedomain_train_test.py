@@ -1,9 +1,19 @@
+#! /usr/bin/python   
 #from tensorflow.examples.tutorials.mnist import input_data
 #mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 from random import sample
 import numpy as np
 import tensorflow as tf
 import json
+
+stridesize = int(sys.argv[1])
+seed = int(sys.argv[2])
+tf.set_random_seed(seed)
+
+print "Running with stride %i and seed %i"%(stridesize, seed)
+
+os.chdir("0.3")
+
 datX=[]
 daty=[]
 with open('vector_flatten_pos.json') as json_data:
@@ -43,7 +53,7 @@ def bias_variable(shape,name):
     return tf.Variable(initial)
 def conv2d(x, W):
     #(Change the strides value in this from [1,1,1,,1] to [1,7,7,1])
-    return tf.nn.conv2d(x, W, strides=[1, 5, 5, 1], padding='SAME')# try changing no. of strides 
+    return tf.nn.conv2d(x, W, strides=[1, stridesize, stridesize, 1], padding='SAME')# try changing no. of strides 
 def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],strides=[1, 2, 2, 1], padding='SAME') # try changin the pooling options (strides and ksize)
 
