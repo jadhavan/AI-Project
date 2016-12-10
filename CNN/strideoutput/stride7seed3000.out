@@ -1,0 +1,361 @@
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcurand.so locally
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:951] Found device 0 with properties: 
+name: Tesla K20m
+major: 3 minor: 5 memoryClockRate (GHz) 0.7055
+pciBusID 0000:03:00.0
+Total memory: 4.69GiB
+Free memory: 4.61GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:572] creating context when one is currently active; existing: 0x24ff2720
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:951] Found device 1 with properties: 
+name: Tesla K20m
+major: 3 minor: 5 memoryClockRate (GHz) 0.7055
+pciBusID 0000:83:00.0
+Total memory: 4.69GiB
+Free memory: 4.61GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:855] cannot enable peer access from device ordinal 0 to device ordinal 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:855] cannot enable peer access from device ordinal 1 to device ordinal 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:972] DMA: 0 1 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] 0:   Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] 1:   N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K20m, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K20m, pci bus id: 0000:83:00.0)
+
+
+Running with stride 7 and seed 3000
+(1, 196, 117660)
+(156, 117660)
+704
+(?, 600)
+(?, 100)
+started learning...
+step 0, training (test) accuracy 0.025, cost 29892.3
+step 0, training (test) accuracy 0.025, cost 24737.2
+step 0, training (test) accuracy 0.025, cost 20260.2
+step 0, training (test) accuracy 0.025, cost 16425.3
+step 25, training (test) accuracy 0.3, cost 241.37
+step 25, training (test) accuracy 0.325, cost 230.327
+step 25, training (test) accuracy 0.325, cost 222.705
+step 25, training (test) accuracy 0.325, cost 218
+step 50, training (test) accuracy 0.25, cost 100.398
+step 50, training (test) accuracy 0.25, cost 94.6846
+step 50, training (test) accuracy 0.275, cost 89.6059
+step 50, training (test) accuracy 0.25, cost 88.607
+step 75, training (test) accuracy 0.325, cost 47.3679
+step 75, training (test) accuracy 0.375, cost 46.6857
+step 75, training (test) accuracy 0.35, cost 46.2846
+step 75, training (test) accuracy 0.4, cost 47.0405
+step 100, training (test) accuracy 0.425, cost 44.3586
+step 100, training (test) accuracy 0.45, cost 44.199
+step 100, training (test) accuracy 0.425, cost 43.7743
+step 100, training (test) accuracy 0.425, cost 43.4902
+step 125, training (test) accuracy 0.35, cost 45.2415
+step 125, training (test) accuracy 0.425, cost 39.0333
+step 125, training (test) accuracy 0.425, cost 37.1336
+step 125, training (test) accuracy 0.45, cost 37.3669
+step 150, training (test) accuracy 0.5, cost 33.5162
+step 150, training (test) accuracy 0.5, cost 33.2338
+step 150, training (test) accuracy 0.5, cost 33.2115
+step 150, training (test) accuracy 0.45, cost 33.2931
+step 175, training (test) accuracy 0.375, cost 38.9382
+step 175, training (test) accuracy 0.325, cost 39.8764
+step 175, training (test) accuracy 0.35, cost 40.3304
+step 175, training (test) accuracy 0.375, cost 40.5646
+step 200, training (test) accuracy 0.475, cost 33.224
+step 200, training (test) accuracy 0.425, cost 32.8804
+step 200, training (test) accuracy 0.425, cost 32.7039
+step 200, training (test) accuracy 0.4, cost 32.223
+step 225, training (test) accuracy 0.45, cost 35.3694
+step 225, training (test) accuracy 0.45, cost 35.0357
+step 225, training (test) accuracy 0.45, cost 34.7086
+step 225, training (test) accuracy 0.45, cost 34.4472
+step 250, training (test) accuracy 0.45, cost 34.7604
+step 250, training (test) accuracy 0.475, cost 34.4374
+step 250, training (test) accuracy 0.475, cost 34.1039
+step 250, training (test) accuracy 0.475, cost 33.9942
+step 275, training (test) accuracy 0.45, cost 32.9143
+step 275, training (test) accuracy 0.45, cost 33.109
+step 275, training (test) accuracy 0.45, cost 33.1277
+step 275, training (test) accuracy 0.475, cost 33.2235
+step 300, training (test) accuracy 0.45, cost 33.7741
+step 300, training (test) accuracy 0.475, cost 33.767
+step 300, training (test) accuracy 0.475, cost 33.6053
+step 300, training (test) accuracy 0.475, cost 33.4343
+step 325, training (test) accuracy 0.45, cost 29.1535
+step 325, training (test) accuracy 0.45, cost 29.1521
+step 325, training (test) accuracy 0.45, cost 29.1782
+step 325, training (test) accuracy 0.45, cost 29.3267
+step 350, training (test) accuracy 0.5, cost 29.7994
+step 350, training (test) accuracy 0.475, cost 30.2659
+step 350, training (test) accuracy 0.5, cost 30.6725
+step 350, training (test) accuracy 0.5, cost 30.9558
+step 375, training (test) accuracy 0.45, cost 34.2338
+step 375, training (test) accuracy 0.45, cost 34.0065
+step 375, training (test) accuracy 0.45, cost 33.7723
+step 375, training (test) accuracy 0.45, cost 33.6046
+step 400, training (test) accuracy 0.575, cost 30.6553
+step 400, training (test) accuracy 0.525, cost 30.6305
+step 400, training (test) accuracy 0.5, cost 30.5495
+step 400, training (test) accuracy 0.475, cost 30.572
+step 425, training (test) accuracy 0.5, cost 31.0522
+step 425, training (test) accuracy 0.5, cost 31.1819
+step 425, training (test) accuracy 0.475, cost 31.4849
+step 425, training (test) accuracy 0.475, cost 31.8035
+step 450, training (test) accuracy 0.425, cost 31.78
+step 450, training (test) accuracy 0.45, cost 31.833
+step 450, training (test) accuracy 0.45, cost 31.5571
+step 450, training (test) accuracy 0.45, cost 31.2247
+step 475, training (test) accuracy 0.45, cost 30.8534
+step 475, training (test) accuracy 0.475, cost 30.8198
+step 475, training (test) accuracy 0.475, cost 30.7877
+step 475, training (test) accuracy 0.475, cost 30.7538
+step 500, training (test) accuracy 0.525, cost 30.7595
+step 500, training (test) accuracy 0.525, cost 30.8966
+step 500, training (test) accuracy 0.525, cost 31.0641
+step 500, training (test) accuracy 0.525, cost 31.2279
+step 525, training (test) accuracy 0.45, cost 31.3113
+step 525, training (test) accuracy 0.45, cost 31.1418
+step 525, training (test) accuracy 0.45, cost 31.0191
+step 525, training (test) accuracy 0.45, cost 30.7571
+step 550, training (test) accuracy 0.475, cost 33.5846
+step 550, training (test) accuracy 0.475, cost 33.898
+step 550, training (test) accuracy 0.475, cost 34.4346
+step 550, training (test) accuracy 0.475, cost 34.9238
+step 575, training (test) accuracy 0.475, cost 32.0801
+step 575, training (test) accuracy 0.475, cost 31.9156
+step 575, training (test) accuracy 0.475, cost 31.794
+step 575, training (test) accuracy 0.475, cost 31.7066
+step 600, training (test) accuracy 0.6, cost 34.8153
+step 600, training (test) accuracy 0.575, cost 34.955
+step 600, training (test) accuracy 0.575, cost 34.9803
+step 600, training (test) accuracy 0.575, cost 35.0007
+step 625, training (test) accuracy 0.425, cost 39.3118
+step 625, training (test) accuracy 0.425, cost 39.5741
+step 625, training (test) accuracy 0.425, cost 39.7643
+step 625, training (test) accuracy 0.425, cost 39.9233
+step 650, training (test) accuracy 0.425, cost 36.6259
+step 650, training (test) accuracy 0.425, cost 36.8878
+step 650, training (test) accuracy 0.425, cost 36.998
+step 650, training (test) accuracy 0.425, cost 37.0052
+step 675, training (test) accuracy 0.525, cost 31.3279
+step 675, training (test) accuracy 0.55, cost 30.9087
+step 675, training (test) accuracy 0.55, cost 30.4735
+step 675, training (test) accuracy 0.55, cost 30.0885
+step 700, training (test) accuracy 0.525, cost 32.3835
+step 700, training (test) accuracy 0.525, cost 32.8292
+step 700, training (test) accuracy 0.55, cost 33.1059
+step 700, training (test) accuracy 0.525, cost 33.3908
+step 725, training (test) accuracy 0.525, cost 31.8
+step 725, training (test) accuracy 0.525, cost 32.1727
+step 725, training (test) accuracy 0.525, cost 32.4742
+step 725, training (test) accuracy 0.525, cost 32.6946
+step 750, training (test) accuracy 0.55, cost 35.0843
+step 750, training (test) accuracy 0.575, cost 34.6476
+step 750, training (test) accuracy 0.575, cost 34.2376
+step 750, training (test) accuracy 0.55, cost 34.0994
+step 775, training (test) accuracy 0.5, cost 31.8507
+step 775, training (test) accuracy 0.5, cost 32.079
+step 775, training (test) accuracy 0.5, cost 32.2606
+step 775, training (test) accuracy 0.5, cost 32.3992
+step 790, training (test) accuracy 0.65, cost 32.6992
+[10  1 11 18  1 11  4  5  9 10 12  6  7 11  3 13  0  2  1 13  2  8  2  8  8
+  1  2  2  2  2  1  1  1  1  2  1  2  0  2  8]
+[10 12 11 18 12 15  4  5  9  5  3  6  7 11 14 14  1  2  1 13  2  8  2 14 14
+ 17  2  2  2  2  1  1  1  2  1  1  2  0  8  8]
+step 800, training (test) accuracy 0.575, cost 34.1167
+step 800, training (test) accuracy 0.55, cost 34.3164
+step 800, training (test) accuracy 0.55, cost 34.318
+step 800, training (test) accuracy 0.575, cost 34.4421
+step 825, training (test) accuracy 0.5, cost 37.9417
+step 825, training (test) accuracy 0.5, cost 37.7384
+step 825, training (test) accuracy 0.5, cost 37.5175
+step 825, training (test) accuracy 0.5, cost 37.295
+step 850, training (test) accuracy 0.425, cost 38.0291
+step 850, training (test) accuracy 0.425, cost 38.2375
+step 850, training (test) accuracy 0.4, cost 38.4396
+step 850, training (test) accuracy 0.4, cost 38.6299
+step 875, training (test) accuracy 0.475, cost 38.6776
+step 875, training (test) accuracy 0.475, cost 39.3605
+step 875, training (test) accuracy 0.475, cost 39.8591
+step 875, training (test) accuracy 0.45, cost 40.3408
+step 900, training (test) accuracy 0.425, cost 40.6925
+step 900, training (test) accuracy 0.425, cost 40.169
+step 900, training (test) accuracy 0.425, cost 39.0089
+step 900, training (test) accuracy 0.45, cost 38.0503
+step 925, training (test) accuracy 0.475, cost 33.1276
+step 925, training (test) accuracy 0.525, cost 33.3009
+step 925, training (test) accuracy 0.525, cost 33.6411
+step 925, training (test) accuracy 0.525, cost 34.0309
+step 950, training (test) accuracy 0.55, cost 37.878
+step 950, training (test) accuracy 0.55, cost 37.8214
+step 950, training (test) accuracy 0.55, cost 37.4774
+step 950, training (test) accuracy 0.525, cost 37.041
+step 975, training (test) accuracy 0.425, cost 35.5001
+step 975, training (test) accuracy 0.45, cost 34.9674
+step 975, training (test) accuracy 0.45, cost 34.5924
+step 975, training (test) accuracy 0.475, cost 34.2959
+step 1000, training (test) accuracy 0.55, cost 36.7872
+step 1000, training (test) accuracy 0.55, cost 36.5728
+step 1000, training (test) accuracy 0.55, cost 36.0093
+step 1000, training (test) accuracy 0.55, cost 35.6849
+step 1025, training (test) accuracy 0.5, cost 35.197
+step 1025, training (test) accuracy 0.5, cost 35.0241
+step 1025, training (test) accuracy 0.475, cost 34.8671
+step 1025, training (test) accuracy 0.475, cost 34.7375
+step 1050, training (test) accuracy 0.525, cost 37.6886
+step 1050, training (test) accuracy 0.525, cost 37.8326
+step 1050, training (test) accuracy 0.525, cost 38.1476
+step 1050, training (test) accuracy 0.525, cost 38.4042
+step 1075, training (test) accuracy 0.55, cost 40.0443
+step 1075, training (test) accuracy 0.55, cost 39.7976
+step 1075, training (test) accuracy 0.55, cost 39.5119
+step 1075, training (test) accuracy 0.55, cost 39.2122
+step 1100, training (test) accuracy 0.5, cost 37.6801
+step 1100, training (test) accuracy 0.525, cost 37.69
+step 1100, training (test) accuracy 0.5, cost 37.6866
+step 1100, training (test) accuracy 0.5, cost 37.6704
+step 1125, training (test) accuracy 0.475, cost 37.5841
+step 1125, training (test) accuracy 0.475, cost 37.6287
+step 1125, training (test) accuracy 0.475, cost 36.9915
+step 1125, training (test) accuracy 0.475, cost 36.3834
+step 1150, training (test) accuracy 0.55, cost 35.9081
+step 1150, training (test) accuracy 0.55, cost 36.0474
+step 1150, training (test) accuracy 0.55, cost 36.1823
+step 1150, training (test) accuracy 0.55, cost 36.3047
+step 1175, training (test) accuracy 0.5, cost 38.5166
+step 1175, training (test) accuracy 0.5, cost 38.4543
+step 1175, training (test) accuracy 0.5, cost 38.4342
+step 1175, training (test) accuracy 0.525, cost 38.5335
+step 1200, training (test) accuracy 0.475, cost 42.4461
+step 1200, training (test) accuracy 0.475, cost 42.515
+step 1200, training (test) accuracy 0.475, cost 42.5919
+step 1200, training (test) accuracy 0.45, cost 42.6718
+step 1225, training (test) accuracy 0.55, cost 37.8654
+step 1225, training (test) accuracy 0.55, cost 37.8954
+step 1225, training (test) accuracy 0.55, cost 37.9315
+step 1225, training (test) accuracy 0.55, cost 38.0223
+step 1250, training (test) accuracy 0.6, cost 34.374
+step 1250, training (test) accuracy 0.6, cost 34.4085
+step 1250, training (test) accuracy 0.6, cost 34.4258
+step 1250, training (test) accuracy 0.6, cost 34.4405
+step 1275, training (test) accuracy 0.475, cost 39.7567
+step 1275, training (test) accuracy 0.5, cost 39.9912
+step 1275, training (test) accuracy 0.475, cost 40.302
+step 1275, training (test) accuracy 0.45, cost 40.5934
+step 1300, training (test) accuracy 0.45, cost 46.9307
+step 1300, training (test) accuracy 0.45, cost 46.9992
+step 1300, training (test) accuracy 0.425, cost 47.253
+step 1300, training (test) accuracy 0.425, cost 47.4603
+step 1325, training (test) accuracy 0.55, cost 35.4967
+step 1325, training (test) accuracy 0.55, cost 35.4707
+step 1325, training (test) accuracy 0.55, cost 36.0261
+step 1325, training (test) accuracy 0.525, cost 36.7641
+step 1350, training (test) accuracy 0.5, cost 31.5433
+step 1350, training (test) accuracy 0.5, cost 31.5536
+step 1350, training (test) accuracy 0.5, cost 31.5873
+step 1350, training (test) accuracy 0.5, cost 31.6343
+step 1375, training (test) accuracy 0.5, cost 43.5679
+step 1375, training (test) accuracy 0.525, cost 40.6706
+step 1375, training (test) accuracy 0.475, cost 39.9908
+step 1375, training (test) accuracy 0.45, cost 39.6636
+step 1400, training (test) accuracy 0.525, cost 39.8963
+step 1400, training (test) accuracy 0.5, cost 39.9632
+step 1400, training (test) accuracy 0.5, cost 40.0494
+step 1400, training (test) accuracy 0.5, cost 40.1998
+step 1425, training (test) accuracy 0.425, cost 53.4723
+step 1425, training (test) accuracy 0.425, cost 53.3033
+step 1425, training (test) accuracy 0.45, cost 52.0716
+step 1425, training (test) accuracy 0.475, cost 50.9142
+step 1450, training (test) accuracy 0.5, cost 43.8339
+step 1450, training (test) accuracy 0.5, cost 43.3673
+step 1450, training (test) accuracy 0.5, cost 42.8621
+step 1450, training (test) accuracy 0.525, cost 42.634
+step 1475, training (test) accuracy 0.475, cost 48.5514
+step 1475, training (test) accuracy 0.475, cost 47.9238
+step 1475, training (test) accuracy 0.475, cost 47.9367
+step 1475, training (test) accuracy 0.475, cost 48.064
+step 1500, training (test) accuracy 0.525, cost 42.7653
+step 1500, training (test) accuracy 0.525, cost 42.954
+step 1500, training (test) accuracy 0.525, cost 43.1214
+step 1500, training (test) accuracy 0.525, cost 43.2632
+step 1525, training (test) accuracy 0.4, cost 47.2826
+step 1525, training (test) accuracy 0.425, cost 46.6596
+step 1525, training (test) accuracy 0.45, cost 46.2542
+step 1525, training (test) accuracy 0.45, cost 46.2731
+step 1550, training (test) accuracy 0.5, cost 51.8404
+step 1550, training (test) accuracy 0.5, cost 51.8058
+step 1550, training (test) accuracy 0.525, cost 51.901
+step 1550, training (test) accuracy 0.525, cost 52.0165
+step 1575, training (test) accuracy 0.525, cost 38.7137
+step 1575, training (test) accuracy 0.525, cost 38.7999
+step 1575, training (test) accuracy 0.55, cost 38.9883
+step 1575, training (test) accuracy 0.55, cost 39.1275
+step 1600, training (test) accuracy 0.475, cost 43.2138
+step 1600, training (test) accuracy 0.475, cost 43.1522
+step 1600, training (test) accuracy 0.475, cost 43.1806
+step 1600, training (test) accuracy 0.475, cost 43.289
+step 1625, training (test) accuracy 0.55, cost 38.7768
+step 1625, training (test) accuracy 0.55, cost 38.7798
+step 1625, training (test) accuracy 0.55, cost 38.7826
+step 1625, training (test) accuracy 0.55, cost 38.7853
+step 1650, training (test) accuracy 0.55, cost 39.1336
+step 1650, training (test) accuracy 0.55, cost 39.1188
+step 1650, training (test) accuracy 0.55, cost 39.1048
+step 1650, training (test) accuracy 0.55, cost 39.0921
+step 1675, training (test) accuracy 0.55, cost 42.4968
+step 1675, training (test) accuracy 0.55, cost 42.6243
+step 1675, training (test) accuracy 0.55, cost 42.7157
+step 1675, training (test) accuracy 0.55, cost 42.792
+step 1700, training (test) accuracy 0.525, cost 37.8224
+step 1700, training (test) accuracy 0.55, cost 37.9156
+step 1700, training (test) accuracy 0.525, cost 38.0446
+step 1700, training (test) accuracy 0.525, cost 38.1624
+step 1725, training (test) accuracy 0.55, cost 37.132
+step 1725, training (test) accuracy 0.525, cost 37.0802
+step 1725, training (test) accuracy 0.525, cost 37.6988
+step 1725, training (test) accuracy 0.525, cost 38.7645
+step 1750, training (test) accuracy 0.525, cost 47.6607
+step 1750, training (test) accuracy 0.5, cost 46.8399
+step 1750, training (test) accuracy 0.5, cost 46.4885
+step 1750, training (test) accuracy 0.475, cost 46.1625
+step 1775, training (test) accuracy 0.5, cost 49.3626
+step 1775, training (test) accuracy 0.5, cost 49.751
+step 1775, training (test) accuracy 0.5, cost 50.103
+step 1775, training (test) accuracy 0.525, cost 50.3682
+step 1800, training (test) accuracy 0.475, cost 49.9648
+step 1800, training (test) accuracy 0.525, cost 50.1948
+step 1800, training (test) accuracy 0.525, cost 50.343
+step 1800, training (test) accuracy 0.525, cost 50.47
+step 1825, training (test) accuracy 0.475, cost 43.8275
+step 1825, training (test) accuracy 0.5, cost 40.4401
+step 1825, training (test) accuracy 0.5, cost 41.3153
+step 1825, training (test) accuracy 0.5, cost 42.7396
+step 1850, training (test) accuracy 0.45, cost 49.0866
+step 1850, training (test) accuracy 0.45, cost 49.2278
+step 1850, training (test) accuracy 0.45, cost 48.8976
+step 1850, training (test) accuracy 0.45, cost 48.5989
+step 1875, training (test) accuracy 0.4, cost 43.5141
+step 1875, training (test) accuracy 0.4, cost 43.0419
+step 1875, training (test) accuracy 0.4, cost 42.6828
+step 1875, training (test) accuracy 0.4, cost 42.4504
+step 1900, training (test) accuracy 0.475, cost 41.2138
+step 1900, training (test) accuracy 0.475, cost 41.2212
+step 1900, training (test) accuracy 0.475, cost 41.2263
+step 1900, training (test) accuracy 0.475, cost 41.2355
+step 1925, training (test) accuracy 0.425, cost 48.0557
+step 1925, training (test) accuracy 0.425, cost 48.2226
+step 1925, training (test) accuracy 0.425, cost 48.3466
+step 1925, training (test) accuracy 0.425, cost 48.4692
+step 1950, training (test) accuracy 0.45, cost 46.8259
+step 1950, training (test) accuracy 0.45, cost 46.7996
+step 1950, training (test) accuracy 0.45, cost 46.7758
+step 1950, training (test) accuracy 0.45, cost 46.7513
+step 1975, training (test) accuracy 0.45, cost 54.15
+step 1975, training (test) accuracy 0.45, cost 54.082
+step 1975, training (test) accuracy 0.45, cost 52.6742
+step 1975, training (test) accuracy 0.45, cost 51.5578
+Finished learning...
+0.55
