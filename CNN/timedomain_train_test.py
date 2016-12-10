@@ -9,14 +9,16 @@ daty=[]
 with open('vector_flatten_pos.json') as json_data:
     datX.append(json.load(json_data))
 
-with open('vector_flatten_label_pos_nos.json') as json_data:
+with open('vector_flatten_label_nos.json') as json_data:
     daty.append(json.load(json_data))
 #print mnist.train.images.shape
 print np.array(datX).shape
-X=np.array(datX).reshape((196,1961*15*4))
+X=np.array(datX).reshape((228,1961*15*4))
 #X=(X-np.average(X,axis=0))/np.std(X,axis=0)
-y=np.array(daty).reshape((196,20))
-data_nos_test=[1,42,74,105,168,7,24,58,72,104,133,114,175,81,89,149,180,98,189,77,110,190,30,64,33,192,93,124,186,85,146,179,28,0,20,69,100,132,26,39]
+y=np.array(daty).reshape((228,20))
+data_nos_test=[1,42,74,105,168,7,24,72,104,133,114,81,89,149,98,77,110,30,64,33,192,93,186,85,146,28,0,20,69,132,26,39,14,226,220,34,212,4,204,90,122,10,201,2,199,15,32]
+print len(data_nos_test)
+
 data_nos_train = []
 for i in range(np.array(datX)[0].shape[0]):
     if data_nos_test.count(i):
